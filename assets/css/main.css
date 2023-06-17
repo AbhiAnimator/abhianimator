@@ -299,6 +299,13 @@ About & Contact
 	font-size: 1.25em;
 	line-height: 1.8;
 	letter-spacing: 1.1px;
+	color: #222;
+}
+.services-item p, .contact-item p:hover{
+	color: #009fff;
+}
+.services-item p{
+	color: #222;
 }
 
 /*-----------------------------------------------------
@@ -496,7 +503,7 @@ footer{
 
 .social-links li a{
 	color: #000;
-	font-size: 1.4em;
+	font-size: 1.8em;
 }
 
 .social-links li a:hover{
