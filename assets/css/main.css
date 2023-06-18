@@ -50,7 +50,7 @@ html {
 }
 
 body{
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Josefin Sans', sans-serif;
 	font-size: 62.5%; 
 }
 
@@ -98,7 +98,7 @@ header{
 
 .logo{
 	color: #009fff;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Josefin Sans', sans-serif;
 	font-size: 2.7em;
 	font-weight: 600;
 	letter-spacing: 2px;
@@ -209,10 +209,10 @@ Home Page
 
 .hero-content h1{
 	font-size: 6.3em;
-	font-weight: 300;
+	font-weight: 600;
 	letter-spacing: 5px;
 	line-height: 1.5;
-	text-transform: uppercase;
+	text-transform:none;
 	padding-bottom:30px;
 	color: #fafafa;
 }
@@ -220,10 +220,10 @@ Home Page
 .hero-content h2{
 	color: #fafafa;
 	font-size: 1.9em;
-	font-weight: 300;
+	font-weight: 400;
 	letter-spacing: 5px;
 	line-height: 2.5;
-	text-transform: uppercase;
+	text-transform: none;
 }
 
 /*-----------------------------------------------------
