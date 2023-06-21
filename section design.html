@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS styles for the layout */
+    .row {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    .column {
+      flex: 1;
+      padding: 20px;
+      overflow-y: scroll;
+      max-height: 400px;
+    }
+
+    .column img {
+      width: 100%;
+      height: auto;
+      opacity: 0; /* Initially hide the images */
+      transition: opacity 0.5s ease-in-out; /* Add fade transition effect */
+    }
+
+    .show {
+      opacity: 1; /* Show the images */
+    }
+  </style>
+</head>
+<body>
+  <div class="row">
+    <div class="column" id="leftColumn">
+      <img src="assets/img/brands/iORA.jpg" alt="Image 1">
+      <img src="assets/img/brands/Rorosaur.jpg" alt="Image 2">
+      <img src="assets/img/brands/smartveda.jpg" alt="Image 3">
+    </div>
+    <div class="column" id="rightColumn">
+      <div id="content1">Content 1</div>
+      <div id="content2">Content 2</div>
+      <div id="content3">Content 3</div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript code to handle scrolling and content changes
+    const leftColumn = document.getElementById('leftColumn');
+    const rightColumn = document.getElementById('rightColumn');
+    const images = leftColumn.getElementsByTagName('img');
+    const contentSections = rightColumn.children;
+
+    leftColumn.addEventListener('scroll', () => {
+      const scrollOffset = leftColumn.scrollTop;
+      const windowHeight = window.innerHeight;
+
+      for (let i = 0; i < images.length; i++) {
+        const image = images[i];
+        const section = contentSections[i];
+        const sectionOffsetTop = section.offsetTop;
+
+        // Calculate the visibility of the section
+        const sectionTop = sectionOffsetTop - scrollOffset;
+        const sectionBottom = sectionOffsetTop + section.offsetHeight - scrollOffset;
+        const isVisible = (sectionTop >= 0 && sectionTop <= windowHeight) || (sectionBottom >= 0 && sectionBottom <= windowHeight);
+
+        if (isVisible) {
+          image.classList.add('show'); // Show the image using the CSS class
+          section.style.display = 'block'; // Show the content section
+        } else {
+          image.classList.remove('show'); // Hide the image
+          section.style.display = 'none'; // Hide the content section
+        }
+      }
+    });
+  </script>
+</body>
+</html>
