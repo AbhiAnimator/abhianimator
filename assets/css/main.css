@@ -233,7 +233,7 @@ Home Page
 	background: #4E598C;
 	position: relative;
 	width: 100%;
-	height: 600px;
+	height: 500px;
 	z-index: 0;
 }
 
@@ -249,9 +249,10 @@ Home Page
 .hero-content h1{
 	font-size: 6.3em;
 	font-weight: 600;
-	letter-spacing: 2px;  
-	line-height: 1.5;
+	letter-spacing: .5px;
+	line-height: 1;
 	text-transform:none;
+	padding-top: 15px;
 	padding-bottom:30px;
 	color: #fafafa;
 }
@@ -260,7 +261,7 @@ Home Page
 	color: #fafafa;
 	font-size: 1.9em;
 	font-weight: 400;
-	letter-spacing: 1.5px;
+	letter-spacing: 1px;
 	line-height: 2.5;
 	text-transform: none;
 }
@@ -347,7 +348,7 @@ About & Contact
 	color: #222;
 }
 .contact-item img{
-	height: 50px;
+	height: 30px;
 	width: auto;
 }
 .services-item img{
@@ -387,6 +388,12 @@ Works
 }
 
 .works-item img{
+	width: 100%;
+	height: 100%;
+	object-fit:cover;
+	display: block;						
+}
+.works-item video{
 	width: 100%;
 	height: 100%;
 	object-fit:cover;
