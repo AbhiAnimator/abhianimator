@@ -104,7 +104,11 @@
 	}
 
 	.main-menu li ul {
-		visibility: hidden;
+		visibility: visible;
+		position: relative;
+		top: auto;
+		box-shadow: none;
+		left: 20%;
 	}
 
 	.works_2-columns .works-item,
